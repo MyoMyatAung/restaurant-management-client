@@ -5,4 +5,5 @@ export interface SideMenuItem {
     icon: ReactNode;
     activeIcon?: ReactNode;
     title: string;
+    element: ReactNode;
 }

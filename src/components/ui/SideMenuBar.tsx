@@ -4,6 +4,7 @@ import { ORDER_MENU_ITEMS } from "../../libs/constants/OrderMenuItems";
 import { SETTING_MENU_ITEMS } from "../../libs/constants/SettingMenuItems";
 import { USER_MENU_ITEMS } from "../../libs/constants/UserMenuItems";
 import SideMenuList from "./SideMenuList";
+import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/outline";
 
 const SideMenuBar = () => {
     return <aside className="border-r border-r-gray-200 w-64 overflow-scroll overflow-x-hidden">
@@ -18,6 +19,12 @@ const SideMenuBar = () => {
             <SideMenuList list={ORDER_MENU_ITEMS} title="Orders" />
             <SideMenuList list={USER_MENU_ITEMS} title="Users" />
             <SideMenuList list={SETTING_MENU_ITEMS} title="Settings" />
+
+            <div className="pt-4 px-4">
+                <button className="group flex items-center gap-2 py-2 px-4 text-sm text-red-600 bg-red-100 w-full hover:text-white hover:bg-red-600 rounded-md">
+                    <ArrowLeftOnRectangleIcon className="h-5 w-5 text-red-600 group-hover:text-white" /> Logout
+                </button>
+            </div>
         </div>
     </aside>
 }
