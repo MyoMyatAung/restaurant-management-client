@@ -1,12 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import RootLayout from "./components/Layouts/RootLayout";
-import AuthPage from "./pages/AuthPage";
+import RootLayout from "./components/layout/RootLayout";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="admin" element={<RootLayout />}>
+        <Route path="" element={<RootLayout />}>
           <Route
             index={true}
             element={<div>This will be dashboard page</div>}
@@ -16,7 +15,6 @@ function App() {
             element={<div>This will be property type page</div>}
           />
         </Route>
-        <Route path="auth" element={<AuthPage />}></Route>
       </Routes>
     </BrowserRouter>
   );
